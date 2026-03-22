@@ -21,6 +21,8 @@ O projeto foi feito como parte do meu portfólio prático de redes, usando o Cis
 - Dispositivos IoT (lâmpadas, câmeras, porta de garagem)
 - Tablet para controle IoT
 - Notebooks e PCs
+- Server-PT
+- Home Gateway
 
 ---
 
@@ -105,7 +107,19 @@ O arquivo `.pkt` com a topologia completa está disponível para download e pode
 
 [📥 Download — Smart-Home-IoT-Cisco-PT.pkt](Smart-Home-IoT-Cisco-PT.pkt)
 
+### Servidor DNS (Servidor_da_Casa)
+
+O servidor recebeu IP fixo `192.168.1.12` e foi configurado com o serviço DNS ativo. Foi criado um registro do tipo **A Record** apontando o domínio `ns.casa.com.br` para o próprio IP `192.168.1.12`. Assim, qualquer dispositivo da rede que precise resolver esse domínio encontra o servidor local sem depender de DNS externo.
+
+![Configurações globais do servidor](imagens/servidor_config_global.jpg)
+
+![IP fixo do servidor](imagens/servidor_ip.jpg)
+
+![Configuração do DNS com domínio ns.casa.com.br](imagens/servidor_dns.jpg)
+
 ---
+
+## 💡 O que aprendi com esse projeto
 
 Configurar telefonia IP do zero num roteador Cisco é bem diferente de só plugar um telefone na tomada. A parte mais crítica foi entender o papel da `option 150` no DHCP — sem ela, o telefone recebe IP mas não consegue baixar a configuração do servidor e fica sem ramal.
 
