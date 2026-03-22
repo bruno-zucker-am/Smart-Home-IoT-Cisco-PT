@@ -40,7 +40,7 @@ A topologia também conta com um **Server-PT** simulando um servidor DNS externo
 
 O roteador foi configurado com o endereço `192.168.1.1` na interface GigabitEthernet0/0, que é a interface voltada pra rede da casa.
 
-Foi criado um pool de DHCP chamado `VOIP_CASA` pra distribuir IPs automaticamente pra todos os dispositivos. Os endereços de `.1` até `.5` foram reservados para uso fixo, então os dispositivos recebem a partir do `.6`.
+Foi criado um pool de DHCP chamado `REDE_DA_CASA` pra distribuir IPs automaticamente pra todos os dispositivos. Os endereços de `.1` até `.5` foram reservados para uso fixo, então os dispositivos recebem a partir do `.6`.
 
 Uma configuração importante foi a **option 150**, que aponta os telefones IP pro próprio roteador como servidor TFTP. Sem essa linha, os telefones não conseguem se registrar no serviço de telefonia.
 
